@@ -1,16 +1,17 @@
-#Kelly Xie
-#CSCI-UA 2.2
-#May 11, 2015
-#Algorithmic Art
+# Kelly Xie
+# CSCI-UA 2
+# May 11, 2015
+# Algorithmic Art
 
 
-##at least five colors
-##at least five original functions
-##at least one list
-##at least one dictionary
-##at least one "for" loop
-##at least one "while" loop
-##at least one user option
+# Program specifications:
+#   at least five colors
+#   at least five original functions
+#   at least one list
+#   at least one dictionary
+#   at least one "for" loop
+#   at least one "while" loop
+#   at least one user option
 
 
 from turtle import *
@@ -25,7 +26,7 @@ def hexagon(s,n):
     for i in range(n//2):
         speed(0)
         color = random.choice(color_list)
-        hexagon_draw(color,s) #call function
+        hexagon_draw(color,s) # calls function
         pu()
         backward(s*1.5)
         left(30)
@@ -71,10 +72,10 @@ def choose_circle(r,n):
         tone, color = color_dictionary.popitem()
         color_dictionary[tone] = color
         color = random.choice(color)
-        circle_draw(color,r) #call function
+        circle_draw(color,r) # calls function
         pu()
         forward(r*2)
-        left(angle) #60,45,35,30 degrees
+        left(angle) # 60,45,35,30 degrees
         backward(r*4)
         pd()
         r*=1.2
@@ -112,12 +113,12 @@ def drawing():
     if shape.lower() == 'h':
         side = int(input("What is the length of the sides of the first hexagon? "))
         num = int(input("How many hexagons do you want? (>50 for best results): "))
-        hexagon(side, num) #call function
+        hexagon(side, num) # calls function
         
     if shape.lower() == 'c':
         radius = int(input("What is the radius of the first circle? "))
         num = int(input("How many circles do you want? (>50 for best results): "))
-        choose_circle(radius, num) #call function
+        choose_circle(radius, num) # calls function
 
 
 drawing()
